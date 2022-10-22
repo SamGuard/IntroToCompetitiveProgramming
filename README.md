@@ -27,12 +27,24 @@ Finally, the Sample Input/Output sections are used to demonstrate what a correct
 
 
 
-## Section 2: Input and Output
+# Section 2: Input and Output
 For every problem you are going to have to take some form of input and print an output. So below we are going to dedicate this section with how it works and best practices.
-### Input
+## Input
 There is roughly three ways that input is done for problems:
 1. The input length is given in the input or in the problem text
 2. There is a word/number that means stop (often a 0, -1 or end)
 3. An End of File character
 
-The first method is the most common, and is simple to handle. An example of this can be seen in this problem: [aboveaverage](https://open.kattis.com/problems/aboveaverage)[0]. In the input section it says "*The first line of standard input contains an integer 1 <= **C** <= 50, the number of test cases*". In this problem, a test case refers to a single line of input. So we know there will be 50 lines after this. This means we can put are code in a simple for loop, that will loop **C** times. Next in the input description, it tells us what each line constists of: "*Each data set begins with an integer, **N**, the number of people in the class (1 <= N <= 1000)*". This now tells us on every line there will be N number of values. If you look at the sample inputs
+The first method is the most common, and is simple to handle. An example of this can be seen in this problem: [aboveaverage](https://open.kattis.com/problems/aboveaverage)[0]. In the input section it says "*The first line of standard input contains an integer 1 <= **C** <= 50, the number of test cases*". In this problem, a test case refers to a single line of input. So we know there will be 50 lines after this. This means we can put are code in a simple for loop, that will loop **C** times. Next in the input description, it tells us what each line constists of: "*Each data set begins with an integer, **N**, the number of people in the class (1 <= N <= 1000)*". This now tells us on every line there will be N number of values. At this point I often take a look at the sample inputs so I can better understand what format everything is in. 
+
+### How does input actually work?
+We've spoken a lot about the inputs but how do we actually get them? To briefly explain (and oversimplify) I will have to teach some basic Operating System stuff. To get input in python there is a few ways you can do it, you can open a file, download data etc. but what we will be doing is getting input from the **Standard Input**. This is often abbrieviated to stdin. This is a section of memory that is a buffer between the actual thing doing the input and the program. So, when you use the **input()** function in python, all this doing is reading (and removing) data from the buffer until it hits a new line. 
+
+A quick thing on newlines: A new line to the operating system is a special character that cannot be seen and it placed every time you hit enter. When you hit enter a new line character is placed, and whatever thing you are using to read the text will encouter this and know that this means it needs to start a new line. More on these later. 
+
+If there is no data in the buffer it will wait until there is some to read. 
+
+For the command line, the data is only transfered from your command line to the buffer when you hit enter (place a newline). You may notice this as when you use the *input()* function your program will wait until you press enter.
+
+### Finally, lets get some input
+For this first type of question, **input()** will work fine. Have a go at solving the [aboveaverage](https://open.kattis.com/problems/aboveaverage)[0] problem using **input()**. If you get stuck, take a look at the solution and hopefully it'll clear things up.
