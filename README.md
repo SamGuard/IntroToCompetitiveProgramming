@@ -1,3 +1,4 @@
+Hi, this is a work in progress, so if youre reading this, hi welcome. I hope this can be helpful. It is not finished atm but the info below should at least make sense <3
 # Hello World
 Hi and welcome to intro to competitive programming. This is a series of tutorials to help you get into the groove of things.
 This will not teach any fancy algorithms really, it is mostly to give you a base to build more knowledge off (if you want to). 
